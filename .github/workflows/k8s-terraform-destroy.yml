@@ -1,13 +1,7 @@
-name: Terraform INIT PLAN APPLY
-
+name: Terraform DESTROY
 on:
   workflow_dispatch:
-  push:
-    branches:
-    - main
-    paths:
-    - 'K8s-Terraform-Code/**'
-    
+  
 jobs:
   terraform-actions:
     name: Workflow
@@ -28,17 +22,13 @@ jobs:
       uses: hashicorp/setup-terraform@v1.2.1
 
     - name: Terraform Init
-      id: Init
+      id: init
       run: |
        cd K8s-Terraform-Code
        terraform init -backend-config="bucket=${{ secrets.STATE_BUCKET_NAME }}" -backend-config="key=${{ secrets.STATE_PATH }}"
-    - name: Terraform Plan
+       
+    - name: Terraform Destroy
       id: Plan
       run: |
        cd K8s-Terraform-Code
-       terraform plan
-    - name: Terraform Apply
-      id: Apply
-      run: |
-       cd K8s-Terraform-Code
-       terraform apply -auto-approve
+       terraform destroy -auto-approve
