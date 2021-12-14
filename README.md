@@ -31,8 +31,7 @@ Image in Docker Hub:
 Testing locally:
 
 ![image](https://user-images.githubusercontent.com/55613494/146034459-4634fff5-7825-41af-a4f0-bfca6832d999.png)
-![image](https://user-images.githubusercontent.com/55613494/146034495-c6452f0d-1ebc-44ac-810e-c2916b2b3859.png)
-
+![image](https://user-images.githubusercontent.com/55613494/146034879-8ddcb763-f220-4da4-8d14-07e93c50fcd8.png)
 
 ### 2.  IaC TF code to deploy EKS cluster (k8s-terraform.yml)
    Steps:
@@ -42,9 +41,11 @@ Testing locally:
    4. TF Init
    5. TF Plan
    6. TF Apply with auto-approve set to true
- #Note: I have stored the state file in a private S3 bucket that I hosted for testing purposes
+
+Note: I have stored the state file in a private S3 bucket that I hosted for testing purposes
  
 ![image](https://user-images.githubusercontent.com/55613494/146032835-58f4ebfa-693b-4757-9633-c1ec26c8758b.png)
+
 #### Screenshots for Point 2:
 Cluster deployed:
 
