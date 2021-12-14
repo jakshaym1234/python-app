@@ -1,0 +1,22 @@
+name: Terraform DESTROY
+on:
+  workflow_dispatch:
+  
+jobs:
+  terraform-actions:
+    name: Workflow
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@main
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-2
+    - name: Setup Kube Congig
+      run: aws eks --region us-west-2 update-kubeconfig --name linkfire-eks-cluster
+        
