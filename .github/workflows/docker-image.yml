@@ -19,7 +19,7 @@ jobs:
     - name: Build the Docker image
       run: |
        cd Application-Code
-       docker build . --file ./Dockerfile --tag python-app:latest
+       docker build . --file ./Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/python-app:latest
     - name: Push to Docker HUB Registry
       run: docker push ${{ secrets.DOCKER_USERNAME }}/python-app:latest
     - name: Delete the Local Image Built
