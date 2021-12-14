@@ -76,5 +76,23 @@ Access the app from the browser using the EXTERNAL-IP stated above
 
 ![image](https://user-images.githubusercontent.com/55613494/146033947-7d4c2d13-8d85-407b-88dd-5b13a04a6fb6.png)
 
+#### Screenshots for PIPELINES Working:
+Docker Build pipeline:
+
+![image](https://user-images.githubusercontent.com/55613494/146036717-7edc55ab-e62d-4886-a3e5-d15f92b9a379.png)
+![image](https://user-images.githubusercontent.com/55613494/146036867-5fd68c62-2203-4489-bd7f-decf3652fb0b.png)
+
+TF INIT PLAN APPLY pipeline:
+
+![image](https://user-images.githubusercontent.com/55613494/146036937-51e723f0-4c5f-4610-8a1e-79765dc81bed.png)
+![image](https://user-images.githubusercontent.com/55613494/146037013-fa94cb5f-b1f6-4c6e-9ca8-c1da1f81fb6b.png)
+
+K8s objects deploy pipeline:
+
+![image](https://user-images.githubusercontent.com/55613494/146037102-c45b8e3f-b4d5-4a52-b035-532e12d38d08.png)
+![image](https://user-images.githubusercontent.com/55613494/146037148-3dffa5a9-c5a1-46f1-8c71-74359630e211.png)
+
+
+
 
 
