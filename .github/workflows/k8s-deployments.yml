@@ -1,4 +1,4 @@
-name: Terraform DESTROY
+name: K8s manifest deployments
 on:
   workflow_dispatch:
   
