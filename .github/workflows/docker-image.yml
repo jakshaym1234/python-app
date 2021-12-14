@@ -23,6 +23,6 @@ jobs:
     - name: Push to Docker HUB Registry
       run: docker push ${{ secrets.DOCKER_USERNAME }}/python-app:latest
     - name: Delete the Local Image Built
-      run: docker rmi ${{ secrets.DOCKER_USERNAME }}/python-app:$VERSION
+      run: docker rmi ${{ secrets.DOCKER_USERNAME }}/python-app:latest
 
 
