@@ -29,9 +29,10 @@ jobs:
       
     - name: Kubectl info
       run: | 
+       cd K8s-Deployment-Manifests
        kubectl version
-       kubectl get nodes
-       kubectl get pods
+       kubectl apply -f python-app-deployment.yml
+       kubectl apply -f python-app-service.yml
 
     
 
