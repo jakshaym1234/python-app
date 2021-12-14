@@ -6,7 +6,7 @@ on:
     branches:
     - main
     paths:
-    - 'terraform/**'
+    - 'K8s-Terraform-Code/**'
     
 jobs:
   terraform-actions:
