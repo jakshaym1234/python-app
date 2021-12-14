@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: python
+        version: v1
+    spec:
+      containers:
+        - name: python
+          image: 'jakshaym/python-app:latest'
+          ports:
+            - name: http
+              protocol: TCP
+              containerPort: 5000
