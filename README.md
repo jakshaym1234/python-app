@@ -78,7 +78,7 @@ Access the app from the browser using the EXTERNAL-IP stated above
 
 ![image](https://user-images.githubusercontent.com/55613494/146033947-7d4c2d13-8d85-407b-88dd-5b13a04a6fb6.png)
 ##
-#### Screenshots for PIPELINES Working:
+### Screenshots for PIPELINES Working:
 Docker Build pipeline:
 
 ![image](https://user-images.githubusercontent.com/55613494/146036717-7edc55ab-e62d-4886-a3e5-d15f92b9a379.png)
