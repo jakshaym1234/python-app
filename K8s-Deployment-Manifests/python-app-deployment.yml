@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: python
-          image: 'jakshaym/python-app:latest'
+          image: 'jakshaymm/python-app:latest'
           ports:
             - name: http
               protocol: TCP
