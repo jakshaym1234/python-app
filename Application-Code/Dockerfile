@@ -13,7 +13,7 @@ EXPOSE 5000
 USER python_user 
 #Install Requirements
 RUN pip install -r requirements.txt
-#Set Runtime
+#Set Runtime for Python
 ENTRYPOINT ["python"]
 #Start App
 CMD ["app.py"]
