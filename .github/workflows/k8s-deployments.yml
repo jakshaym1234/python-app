@@ -24,10 +24,10 @@ jobs:
     - name: Setup Kube Config
       run: aws eks --region us-west-2 update-kubeconfig --name linkfire-eks-cluster
       
-    - name: Login to the Docker HUB Registry
+    - name: Login to the Docker Hub Registry
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       
-    - name: Kubectl info
+    - name: Kubectl commands to deploy the K8s objects Service and Deployment
       run: | 
        cd K8s-Deployment-Manifests
        kubectl version
