@@ -1,6 +1,15 @@
 name: K8s manifest deployments
 on:
-  workflow_dispatch:
+  push:
+    branches:
+    - main
+    paths:
+    - 'K8s-Deployment-Manifests/**'
+  pull_request:
+    branches: 
+    - main
+    paths:
+    - 'K8s-Deployment-Manifests/**'
   
 jobs:
   terraform-actions:
