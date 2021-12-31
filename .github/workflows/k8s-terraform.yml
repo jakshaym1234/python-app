@@ -1,9 +1,13 @@
 name: Terraform INIT PLAN APPLY
 
 on:
-  workflow_dispatch:
   push:
     branches:
+    - main
+    paths:
+    - 'K8s-Terraform-Code/**'
+  pull_request:
+    branches: 
     - main
     paths:
     - 'K8s-Terraform-Code/**'
@@ -32,11 +36,13 @@ jobs:
       run: |
        cd K8s-Terraform-Code
        terraform init -backend-config="bucket=${{ secrets.STATE_BUCKET_NAME }}" -backend-config="key=${{ secrets.STATE_PATH }}"
+
     - name: Terraform Plan
       id: Plan
       run: |
        cd K8s-Terraform-Code
        terraform plan
+      
     - name: Terraform Apply
       id: Apply
       run: |
